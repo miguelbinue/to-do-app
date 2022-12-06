@@ -6,13 +6,14 @@
       <h3>Your account:</h3>
       <router-link to="/account">Account</router-link>
     </div>
-    <NewTask />
+    <NewTask @emitTask="getTasks"/>
     <h1>Tasks:</h1>
-    <TaskItem v-for="task in tasks" :key="task.id" :task="task" />
+    <TaskItem v-for="task in tasks" :key="task.id" :task="task" @deleteTask="getTasks"/>
   </div>
 </template>
 
 <script setup>
+
 import { ref } from 'vue'
 import { useTaskStore } from "../stores/task";
 import { useRouter } from 'vue-router';
