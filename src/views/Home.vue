@@ -8,7 +8,7 @@
     </div>
     <NewTask @emitTask="getTasks"/>
     <h1>Tasks:</h1>
-    <TaskItem v-for="task in tasks" :key="task.id" :task="task" @deleteTask="getTasks"/>
+    <TaskItem v-for="task in tasks" :key="task.id" :task="task" @getTasks="getTasks"/>
   </div>
 </template>
 
