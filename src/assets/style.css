@@ -14,6 +14,78 @@ h1 {
     color: var(--colorRed);
 }
 
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-box {
+    background-color: rgb(239, 239, 239);
+    padding: 50px;
+    border-radius: 60px;
+}
+#sign-in {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+.header-title {
+    font-size: 40px;
+    color: rgb(42, 145, 235);
+    margin: 0;
+}
+
+.header-subtitle {
+    font-size: 20px;
+    color: rgb(170, 170, 170);
+    font-weight: bold;
+    margin-bottom: 20px;
+
+}
+
+.input-field {
+    border: none;
+    background-color: #10101010;
+    border-radius: 10px;
+    margin: 5px 0px;
+    padding: 10px 70px 10px 20px;
+} 
+
+#sign-in .button {
+    border: none;
+    background-color: rgb(255, 120, 120);
+    border-radius: 20px;
+    padding: 10px 30px;
+    margin: 30px 0px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.header-description {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.sign-up-link {
+    text-decoration: none;
+    color: rgb(255, 120, 120);
+    font-weight: bold;
+}
+
+p {
+    color: rgb(170, 170, 170);
+    margin-bottom: 0;
+}
 /* SignUp Component */
 
 /* Home view */

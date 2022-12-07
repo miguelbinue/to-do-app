@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-
+<div class="content-box">
     <div class="header">
       <div class="header-description">
         <h3 class="header-title">Register to ToDo App</h3>
@@ -11,33 +11,33 @@
     <form @submit.prevent="signUp" class="form-sign-in">
       <div class="form">
         <div class="form-input">
-          <label class="input-field-label">E-mail</label>
+          <label class="input-field-label"></label>
           <input
             type="email"
             class="input-field"
-            placeholder="example@gmail.com"
+            placeholder="E-mail"
             id="email"
             v-model="email"
             required
           />
         </div>
         <div class="form-input">
-          <label class="input-field-label">Password</label>
+          <label class="input-field-label"></label>
           <input
             type="password"
             class="input-field"
-            placeholder="**********"
+            placeholder="Password"
             id="password"
             v-model="password"
             required
           />
         </div>
         <div class="form-input">
-          <label class="input-field-label">Confirm password</label>
+          <label class="input-field-label"></label>
           <input
             type="password"
             class="input-field"
-            placeholder="**********"
+            placeholder="Confirm password"
             id="confirmPassword"
             v-model="confirmPassword"
             required
@@ -57,6 +57,7 @@
 
     <div v-show="errorMsg">{{errorMsg}}</div>
   </div>
+</div>
 </template>
 
 <script setup>

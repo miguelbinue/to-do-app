@@ -1,5 +1,5 @@
 <template>
-  <router-view></router-view>
+  <router-view id="sign-in"></router-view>
 </template>
 
 <script setup></script>

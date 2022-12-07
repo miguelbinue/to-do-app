@@ -1,9 +1,11 @@
 <template>
 <div class="container">
     <h3>{{task.title}}</h3>
+    <h4>{{task.description}}</h4>
     <button @click="deleteTask">Delete {{task.title}}</button>
+    <button @click="(done = !done), taskDone()" class="button">{{checkString}}</button>
 </div>
-
+<button @click="(editTask = !editTask)" class="button">Edit</button>
 <div>
     <div action="#" v-show="!editTask">
         <div class="input-field">
@@ -15,7 +17,7 @@
         <button @click="updateTask">Save</button>
     </div>
 
-    <button @click="(editTask = !editTask)" class="button">Edit</button>
+    
 
     <!-- <div id="app">
   <button v-on:click="isHidden = true">Hide the text below</button>
@@ -55,6 +57,17 @@ const editTask = ref(true);
 const updateTask = async () => {
     await taskStore.refreshTask(name.value, description.value, props.task.id);
     emit("getTasks")
+};
+
+let checkString = "Done"
+const done = ref(false)
+const taskDone = () => {
+    console.log("efrweg");
+    if (done == ref(true)) {
+        checkString == "Undone"
+    } else {
+        checkString == "Done"
+    };
 };
 
 </script>

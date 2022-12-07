@@ -2,6 +2,7 @@
  
   <template>
 <div class="container">
+  <div class="content-box">
   <div class="header">
       <div class="header-description">
         <h3 class="header-title">Log In to ToDo App</h3>
@@ -12,22 +13,22 @@
   <form @submit.prevent="signIn" class="form-sign-in">
       <div class="form">
         <div class="form-input">
-          <label class="input-field-label">E-mail</label>
+          <label class="input-field-label"></label>
           <input
             type="email"
             class="input-field"
-            placeholder="example@gmail.com"
+            placeholder="Your e-mail"
             id="email"
             v-model="email"
             required
           />
         </div>
         <div class="form-input">
-          <label class="input-field-label">Password</label>
+          <label class="input-field-label"></label>
           <input
             type="password"
             class="input-field"
-            placeholder="**********"
+            placeholder="Password"
             id="password"
             v-model="password"
             required
@@ -47,7 +48,7 @@
 
     <div v-show="errorMsg">{{errorMsg}}</div>
   </div>
-
+</div>
 </template>
 
 <script setup>
@@ -89,7 +90,7 @@ const signIn = async () => {
     }
     return;
   }
-  errorMsg.value = "error";
+  // errorMsg.value = "error";
 </script>
 
 <style></style>
