@@ -304,3 +304,23 @@ img {
     font-weight: bold;
     margin-top: 10px
 }
+
+@media (max-width: 420px) {
+    /* Home view */
+    .items{
+        grid-template-columns: 400px;
+    }
+    /* New Task */
+
+    .new-task-block {
+        flex-direction: column;
+    }
+
+    .new-task-input {
+        margin-left: 7%;
+    }
+
+    .log-out-welcome {
+        display: none;
+    }
+}   
