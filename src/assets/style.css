@@ -119,6 +119,7 @@ p {
     grid-template-columns: 500px 500px;
     justify-items: center;
     justify-content: space-evenly;
+    margin-top: 30px;
 }
 .tachado{
     text-decoration: line-through;
@@ -308,7 +309,7 @@ img {
 @media (max-width: 420px) {
     /* Home view */
     .items{
-        grid-template-columns: 400px;
+        grid-template-columns: 75%;
     }
     /* New Task */
 
@@ -322,5 +323,10 @@ img {
 
     .log-out-welcome {
         display: none;
+    }
+
+    img {
+        width: 70%;
+        margin-top: 0px
     }
 }   

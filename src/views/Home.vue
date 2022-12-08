@@ -13,7 +13,7 @@
     </div>
     <hr/>
   </div>
-    <h1>Tasks:</h1>
+    <!-- <h1>Tasks:</h1> -->
     <div class="items">
       <TaskItem v-for="task in tasks" :key="task.id" :task="task" @getTasks="getTasks"/>
     </div>
