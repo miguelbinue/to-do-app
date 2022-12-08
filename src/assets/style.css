@@ -18,9 +18,17 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
+body {
+    margin: 0px;
+}
+.container {
+    background-image: url(/assets/images/gradient-image.png);
+    background-size: cover;
+}
 .content-box {
-    background-color: rgb(239, 239, 239);
-    padding: 50px;
+    background-color: rgba(255, 255, 255, 20%);
+    padding: 50px 90px;
     border-radius: 60px;
 }
 #sign-in {
@@ -32,13 +40,13 @@ h1 {
 }
 .header-title {
     font-size: 40px;
-    color: rgb(42, 145, 235);
+    color: rgb(255, 255, 255);
     margin: 0;
 }
 
 .header-subtitle {
     font-size: 20px;
-    color: rgb(170, 170, 170);
+    color: rgba(255, 255, 255, 60%);
     font-weight: bold;
     margin-bottom: 20px;
 
@@ -46,7 +54,6 @@ h1 {
 
 .input-field {
     border: none;
-    background-color: #10101010;
     border-radius: 10px;
     margin: 5px 0px;
     padding: 10px 70px 10px 20px;
@@ -83,11 +90,217 @@ h1 {
 }
 
 p {
-    color: rgb(170, 170, 170);
+    color: rgba(255, 255, 255, 60%);
     margin-bottom: 0;
+}
+
+.sign {
+ background-color: #10101010; 
+ outline: none;  
+ color: white;
+}
+
+.form-input ::placeholder {
+    color: rgba(255, 255, 255, 0.434);
 }
 /* SignUp Component */
 
 /* Home view */
+.wrapper {
+    background-image: url(/assets/images/gradient-image.png);
+    background-size: cover;
+    z-index: -1;
+    width: 100%;
+    background-repeat: repeat
+}
+
+.items{
+    display: grid;
+    grid-template-columns: 500px 500px;
+    justify-items: center;
+    justify-content: space-evenly;
+}
+.tachado{
+    text-decoration: line-through;
+}
 
 /* Account View */
+
+/* Nav */
+hr {
+    width: 80%;
+    border-top: 1px;
+    opacity: 30%;
+    
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav li {
+    margin: 0px 10px;
+}
+
+.log-out-welcome p {
+    margin-top: 0px;
+}
+
+ul button {
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    background-color: rgb(255, 120, 120);
+    color: white;
+    font-weight: bold;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: none;
+    margin-top: 10px
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+nav p {
+    color: white;
+}
+
+/* New Task */
+
+.upper-color {
+    background-color: none;
+    display: flex;
+    flex-direction: column;   
+}
+
+.new-task-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+img {
+    width: 45%;
+    height: 10%;
+    margin: 50px 0px 40px
+}
+
+.new-task-title {
+    color: white;
+    font-size: 50px;
+    margin-left: 15%;
+    margin-top: 50px;
+}
+
+.upper-color .input-field {
+    background-color: none;
+}
+
+.input-field input {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background: none;
+    border-color: rgb(255, 255, 255);
+    border-width: 1px;
+    color: white;
+    outline: none;
+    font-size: 20px;
+}
+
+.input-field ::placeholder {
+    color: white;
+}
+
+.new-task-input {
+    padding-bottom: 60px;
+    margin-left: 15%;
+}
+
+.new-task-input button {
+    border-radius: 10px;
+    border: none;
+    padding: 15px 50px;
+    background-color: rgb(255, 120, 120);
+    color: white;
+    font-weight: bold;
+    margin: 40px 20px 10px 20px;
+    font-size: 20px;
+}
+
+
+/* Task Item */
+.undone-text {
+ color: #00000027; 
+}
+
+.container-item{
+    padding: 25px;
+    margin: 25px;
+    width: 80%;
+    box-shadow: 5px 5px 15px 0 rgb(20 20 20 / 30%);
+    border-radius: 10px;
+    border-left-color: rgb(255, 120, 120);
+    border-left-style: solid;
+    border-left-width: 10px;
+    background-color: rgb(189, 204, 212);
+}
+.container-item p{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.item-title{
+    display: flex;
+    justify-content: space-between;
+}
+.item-title button{
+    height: 30px;
+}
+.item-title h3{
+    font-size: 30px;
+    margin: 0;
+}
+.modify-task{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.item-title button {
+    border: none;
+    background-color: rgb(255, 120, 120);
+    border-radius: 20px;
+    padding: 5px 10px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.modify-task button {
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.save-button {
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px
+}

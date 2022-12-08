@@ -1,31 +1,31 @@
 <template>
-  <nav>
-    <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
-    <router-link to="/">
-      Home
-    </router-link>
+    <nav>
+      <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
+      <router-link to="/">
+        Home
+      </router-link>
 
-    <ul>
-        <li>
-          <router-link to="/">Task Manager</router-link>
-        </li>
-
-        <li>
-          <router-link to="/account">Your Account</router-link>
-        </li>
-    </ul>
-
-    <div>
       <ul>
-        <li class="log-out-welcome">
-          <p>Welcome, user</p>
-        </li>
-        <li>
-          <button @click="signOut" class="button">Log out</button>
-        </li>
+          <!-- <li>
+            <router-link to="/">Task Manager</router-link>
+          </li> -->
+
+          <!-- <li>
+            <router-link to="/account">Your Account</router-link>
+          </li> -->
       </ul>
-    </div>
-  </nav>
+
+      <div>
+        <ul>
+          <li class="log-out-welcome">
+            <p>Welcome, user</p>
+          </li>
+          <li>
+            <button @click="signOut" class="button">Log out</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
 </template>
 
 <script setup>
@@ -71,7 +71,6 @@ const signOut = async () => {
 }
 
 nav {
-  background-color: lightgray;
   display: flex;
   width: 100%;
   justify-content: space-around;

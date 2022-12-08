@@ -1,14 +1,22 @@
 <template>
   <div class="wrapper">
+    <div class="upper-color">
     <Nav />
-
-    <div class="content"> 
-      <h3>Your account:</h3>
-      <router-link to="/account">Account</router-link>
+    <hr/>
+    <!-- <div class="content">  -->
+      <!-- <h3>Your account:</h3>
+      <router-link to="/account">Account</router-link> -->
+    <!-- </div> -->
+    <div class="new-task-block">
+      <div><NewTask @emitTask="getTasks"/></div>
+      <img src="/assets/images/computer-image.png" alt="computer-image">
     </div>
-    <NewTask @emitTask="getTasks"/>
+    <hr/>
+  </div>
     <h1>Tasks:</h1>
-    <TaskItem v-for="task in tasks" :key="task.id" :task="task" @getTasks="getTasks"/>
+    <div class="items">
+      <TaskItem v-for="task in tasks" :key="task.id" :task="task" @getTasks="getTasks"/>
+    </div>
   </div>
 </template>
 

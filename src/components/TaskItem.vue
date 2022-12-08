@@ -1,12 +1,24 @@
 <template>
-<div class="container">
-    <h3>{{task.title}}</h3>
-    <h4>{{task.description}}</h4>
-    <button @click="deleteTask">Delete {{task.title}}</button>
-    <button @click="(done = !done), taskDone()" class="button">{{checkString}}</button>
-</div>
-<button @click="(editTask = !editTask)" class="button">Edit</button>
-<div>
+<div class="container-item">
+    <div v-if="!done" class="done-text">
+        <div class="item-title">
+            <h3>{{task.title}}</h3>
+            <button @click="taskDone" class="button">Done</button>
+        </div>
+        <h4>{{task.description}}</h4>
+    </div>
+    <div v-else class="undone-text">
+        <div class="item-title">
+            <h3>{{task.title}}</h3>
+            <button @click="taskDone" class="button">Undone</button>
+        </div>
+        <h4>{{task.description}}</h4>
+    </div>
+    <div class="modify-task">
+        <button @click="(editTask = !editTask)" class="button">Edit</button>
+        <button @click="deleteTask">Delete</button>
+    </div>
+
     <div action="#" v-show="!editTask">
         <div class="input-field">
             <input type="text" placeholder="Title" v-model="name">
@@ -14,7 +26,7 @@
         <div class="input-field">
             <input type="text" placeholder="Description" v-model="description">
         </div>
-        <button @click="updateTask">Save</button>
+        <button @click="updateTask" class="save-button">Save</button>
     </div>
 
     
@@ -59,15 +71,11 @@ const updateTask = async () => {
     emit("getTasks")
 };
 
-let checkString = "Done"
-const done = ref(false)
-const taskDone = () => {
-    console.log("efrweg");
-    if (done == ref(true)) {
-        checkString == "Undone"
-    } else {
-        checkString == "Done"
-    };
+const done = ref(props.task.is_complete)
+const taskDone = async () => {
+    done.value = !done.value;
+    await taskStore.taskDone(props.task.is_complete, props.task.id);
+    emit("getTasks")
 };
 
 </script>

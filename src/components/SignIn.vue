@@ -5,7 +5,7 @@
   <div class="content-box">
   <div class="header">
       <div class="header-description">
-        <h3 class="header-title">Log In to ToDo App</h3>
+        <h3 class="header-title">Log In</h3>
         <p class="header-subtitle">Start organizing your tasks!</p>
       </div>
     </div>
@@ -16,7 +16,7 @@
           <label class="input-field-label"></label>
           <input
             type="email"
-            class="input-field"
+            class="input-field sign"
             placeholder="Your e-mail"
             id="email"
             v-model="email"
@@ -27,7 +27,7 @@
           <label class="input-field-label"></label>
           <input
             type="password"
-            class="input-field"
+            class="input-field sign"
             placeholder="Password"
             id="password"
             v-model="password"
